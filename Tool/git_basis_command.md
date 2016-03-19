@@ -7,6 +7,9 @@ git 的全局配置文件在 `~/.gitconfig`，单个项目的配置文件在 `./
 有时我们需要在不同的项目使用不同的用户名和邮箱，因此最好给每个项目单独配置 `user.name` 和 `user.email`
 
 ```shell
+# 显示 git 配置信息
+$ git config --list
+
 # 全局配置 
 $ git config --global user.name my_name
 $ git config --global user.email my_email
@@ -120,6 +123,9 @@ origin  git@github.com:ethan-funny/knowledge-lists.git (push)
 
 
 
+## 参考资料
 
-
+1. [Git远程操作详解](http://www.ruanyifeng.com/blog/2014/06/git_remote.html)
+2. [常用 Git 命令清单](http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
+3. [Git 教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 
