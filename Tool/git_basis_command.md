@@ -1,4 +1,4 @@
-
+[TOC]
 
 ### git 项目信息配置
 
@@ -19,7 +19,16 @@ $ git config user.name another_name
 $ git config user.email another_email
 ```
 
+### 查看项目状态
 
+```shell
+# 查看状态
+$ git status
+
+# 不要显示未跟踪的文件 
+$ git status --untracked-files=no
+$ git status -uno
+```
 
 ### 查看版本历史
 
@@ -123,7 +132,7 @@ origin  git@github.com:ethan-funny/knowledge-lists.git (push)
 
 
 
-## 参考资料
+### 参考资料
 
 1. [Git远程操作详解](http://www.ruanyifeng.com/blog/2014/06/git_remote.html)
 2. [常用 Git 命令清单](http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
