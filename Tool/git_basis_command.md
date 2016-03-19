@@ -1,5 +1,23 @@
 
 
+### git 项目信息配置
+
+git 的全局配置文件在 `~/.gitconfig`，单个项目的配置文件在 `./.git/config`。
+
+有时我们需要在不同的项目使用不同的用户名和邮箱，因此最好给每个项目单独配置 `user.name` 和 `user.email`
+
+```shell
+# 全局配置 
+$ git config --global user.name my_name
+$ git config --global user.email my_email
+
+# 项目单独配置
+$ git config user.name another_name
+$ git config user.email another_email
+```
+
+
+
 ### 查看版本历史
 
 - 查看当前项目的提交记录
