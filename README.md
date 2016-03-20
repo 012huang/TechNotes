@@ -9,13 +9,13 @@
 <!-- MarkdownTOC -->
 
 - [编程语言相关](#编程语言相关)
-	- [C++](#c)
-	- [Java](#java)
-	- [Python](#python)
+    - [C++](#c)
+    - [Java](#java)
+    - [Python](#python)
 - [Git 相关](#git-相关)
 - [数据库相关](#数据库相关)
-	- [mongodb](#mongodb)
-	- [mysql](#mysql)
+    - [mongodb](#mongodb)
+    - [mysql](#mysql)
 - [Linux 相关](#linux-相关)
 - [机器学习](#机器学习)
 
@@ -54,7 +54,7 @@
 
 ## Linux 相关
 
-- [Linux 基础操作](./Skill/linux_basis_command.md)
+- [Linux 基础操作](./Skill/Linux/linux_basis_command.md)
 
 
 ## 机器学习
