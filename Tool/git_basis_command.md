@@ -143,8 +143,13 @@ origin  git@github.com:ethan-funny/knowledge-lists.git (fetch)
 origin  git@github.com:ethan-funny/knowledge-lists.git (push)
 ```
 
+### 设置 editor
 
+默认是系统的 vi
 
+```shell
+$ git config --global core.editor emacs
+```
 
 ### 参考资料
 
