@@ -33,6 +33,16 @@ $ git config user.name another_name
 $ git config user.email another_email
 ```
 
+在使用 git 的时候，经常会碰到有一些中文文件名或者路径被转义成 `\xx\xx\xx` 之类的，如
+
+\346\240\221\350\216.md
+
+可以通过git的配置来改变默认转义，具体命令如下：
+
+```
+git config core.quotepath false
+```
+
 ### 查看项目状态
 
 ```shell
@@ -156,4 +166,4 @@ $ git config --global core.editor emacs
 1. [Git远程操作详解](http://www.ruanyifeng.com/blog/2014/06/git_remote.html)
 2. [常用 Git 命令清单](http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
 3. [Git 教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
-
+4. [Git 常用命令备忘](http://stormzhang.com/git/2014/01/27/git-common-command/)
