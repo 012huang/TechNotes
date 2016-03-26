@@ -1,3 +1,7 @@
+
+`pymongo` 是在 `python` 中操作 `mongodb` 的一个包，使用方法跟 `mongodb` 的 `shell` 命令行类似
+
+
 # -*- coding: utf-8 -*-
 # pymongo 版本 3.2.1
 
