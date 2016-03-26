@@ -33,7 +33,7 @@ def insert_data():
     record_list.append(dict4)
 
     # insert data to db:test/collection: user
-    client.test.user.insert(record_list)
+    client.test.user.insert_many(record_list)
 
 
 def update_data():
@@ -45,8 +45,8 @@ def update_data():
 
     # 更新 lucy 的年龄
     new_age = {'age': 25}
-    client.test.user.update({'name': 'lucy'}, {'$set': new_age})
-    client.test.user.update({'name': 'lucy'}, {'$set': {'age': 26}})
+    client.test.user.update_one({'name': 'lucy'}, {'$set': new_age})
+    client.test.user.update_one({'name': 'lucy'}, {'$set': {'age': 26}})
 
     # 所有记录
     record = client.test.user.find()
@@ -62,8 +62,8 @@ def update_data():
     new_record2 = {"name": "Tom", "job": "Hacker"}
 
     # 使用 upsert(update+insert), 根据条件判断有无记录，有的话就更新记录，没有的话就插入一条记录
-    client.test.user.update({'job': 'Student'}, {'$set': new_record}, upsert=False)
-    client.test.user.update({'job': 'Student'}, {'$set': new_record2}, upsert=True)
+    client.test.user.update_one({'job': 'Student'}, {'$set': new_record}, upsert=False)
+    client.test.user.update_one({'job': 'Student'}, {'$set': new_record2}, upsert=True)
 
 
 def search_data():
@@ -73,8 +73,8 @@ def search_data():
     """
     client = con_mongo()
 
-    # 年龄大于 15 且小于 20 且不等于 18
-    age_res = client.test.user.find({"age": {'$gt': 15, '$lt': 20, '$ne': 18}})
+    # 年龄大于 25 且小于 30 且不等于 29
+    age_res = client.test.user.find({"age": {'$gt': 25, '$lt': 30, '$ne': 29}})
     for item in age_res:
         age = item.get('age', '')
         print "expected age info: ", age
@@ -89,13 +89,13 @@ def search_data():
     res_and = client.test.user.find({"name": {'$all': regx_list}})
     for item in res_and:
         name = item.get('name', '')
-        print "name begins with 'l' and ends with 'r' are", name
+        print "name that begins with 'l' and ends with 'r' are ", name
 
     # name 以 'l' 开头或以 'r' 结尾
     res_or = client.test.user.find({"name": {'$in': regx_list}})
     for item in res_or:
         name = item.get('name', '')
-        print "name begins with 'l' or ends with 'r' are", name
+        print "name that begins with 'l' or ends with 'r' are ", name
 
     # name 以 'l' 开头或以 'r' 结尾 -- 第 2 种方法
     pattern_strings = ['^l', 'r$']
@@ -105,7 +105,7 @@ def search_data():
 
     for item in res:
         name = item.get('name', '')
-        print "name begins with 'l' or ends with 'r' are ", name
+        print "name that begins with 'l' or ends with 'r' are ", name
 
 
 if __name__ == '__main__':
