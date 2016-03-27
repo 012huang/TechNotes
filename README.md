@@ -49,6 +49,9 @@
 
 ### mongodb
 
+- [mongodb 命令行操作](./Database/mongodb 命令行操作.md)
+- [pymongo 基本使用](./Databse/pymongo 基本使用.md)
+
 ### mysql
 
 
