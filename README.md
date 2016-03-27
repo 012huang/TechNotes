@@ -43,6 +43,7 @@
 - [python 时间戳处理](./Coding/python/python 时间戳处理.md)
 - [python 正则表达式](./Coding/python/python 正则表达式.md)
 - [python 字符编码](./Coding/python/python 字符编码.md)
+- [virtualenv 使用](./Coding/python/usage_virtualenv.md)
 
 
 
@@ -52,6 +53,8 @@
 - [Valgrind 使用](./Tool/Valgrind.md)
 - [打造一个高效的 mac 开发环境](./Tool/mac 配置.md)
 - [打造一个windows 开发环境](./Tool/windows 配置.md)
+- [hexo 使用](./Tool/hexo.md)
+- [docker 使用](./Skill/Docker/docker 使用.md)
 
 
 ## 数据库相关
