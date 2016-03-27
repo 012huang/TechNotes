@@ -1,49 +1,58 @@
+## 目录
 
 <!-- MarkdownTOC -->
 
-- [git 项目信息配置](#git-项目信息配置)
-- [查看项目状态](#查看项目状态)
-- [查看版本历史](#查看版本历史)
-- [查看版本差异](#查看版本差异)
-- [版本回退](#版本回退)
-- [版本更新](#版本更新)
-- [忽略已经跟踪的文件的改动](#忽略已经跟踪的文件的改动)
-- [查看远程仓库](#查看远程仓库)
+- [git 配置](#git-配置)
+- [git 常用命令](#git-常用命令)
 - [参考资料](#参考资料)
 
 <!-- /MarkdownTOC -->
 
 
-### git 项目信息配置
+### git 配置
 
 git 的全局配置文件在 `~/.gitconfig`，单个项目的配置文件在 `./.git/config`。
 
-有时我们需要在不同的项目使用不同的用户名和邮箱，因此最好给每个项目单独配置 `user.name` 和 `user.email`
+#### 全局配置
 
 ```shell
-# 显示 git 配置信息
-$ git config --list
-
-# 全局配置 
-$ git config --global user.name my_name
-$ git config --global user.email my_email
-
-# 项目单独配置
-$ git config user.name another_name
-$ git config user.email another_email
+$ git config --global user.name my_name       # user.name
+$ git config --global user.email my_email     # user.email
+$ git config --glocal core.quotepath false    # 显示中文文件名
+$ git config --global core.editor emacs       # 设置 Editor 为 emacs
+$ git config --global alias.co checkout       # 设置别名
+$ git config --global alias.ci commit
+$ git config --global alias.st status
+$ git config --global alias.br branch
+$ git config --list                           # 查看 git 的所有配置信息
 ```
 
-在使用 git 的时候，经常会碰到有一些中文文件名或者路径被转义成 `\xx\xx\xx` 之类的，如
 
-\346\240\221\350\216.md
+#### 局部配置
 
-可以通过git的配置来改变默认转义，具体命令如下：
+有时我们需要在不同的项目使用不同的用户名和邮箱，因此最好给每个项目单独配置 `user.name` 和 `user.email`。
 
+```shell
+# 单独配置 user.name 和 user.email，--local 可以去掉
+$ git config (--local) user.name another_name
+$ git config (--local) user.email another_email
+# 查看当前工作目录下的『用户名称』的配置
+git config user.name 
 ```
-git config core.quotepath false
+
+
+### git 常用命令
+
+#### 添加文件到暂存区
+
+```shell
+# 将某个文件修改提交到本地暂存区
+$ git add <file>     
+# 将所有修改过的工作文件提交暂存区  
+$ git add .           
 ```
 
-### 查看项目状态
+#### 查看项目状态
 
 ```shell
 # 查看状态
@@ -54,10 +63,9 @@ $ git status --untracked-files=no
 $ git status -uno
 ```
 
-### 查看版本历史
+#### 查看版本历史
 
 - 查看当前项目的提交记录
-
 
 ```shell
 # 详细
@@ -72,7 +80,7 @@ $ git log --pretty=oneline
 $ git log path/to/file
 ```
 
-### 查看版本差异
+#### 查看版本差异
 
 - 查看当前项目修改前后的差异
 
@@ -86,8 +94,7 @@ $ git diff
 $ git diff path/to/file
 ```
 
-
-### 版本回退
+#### 版本回退
 
 在 `Git` 中，用 `HEAD` 表示当前版本，上一个版本就是 `HEAD^`，上上一个版本就是 `HEAD^^`，
 当前往上 10 个版本写成 `HEAD~10`。
@@ -117,18 +124,18 @@ git checkout <commit hash> path/to/file
 ```
 
 
-### 版本更新
+#### 版本更新
 
 - 更新某个文件
 
 ```shell
-# 下载远程仓库
+# 拉取远程仓库的更新数据
 $ git fetch
 # 检出最新版
 $ git checkout -- path/to/file
 ```
 
-### 忽略已经跟踪的文件的改动
+#### 忽略已经跟踪的文件的改动
 
 有时我们在本地修改了代码库中的配置文件，以便在本地运行，但不想让它提交到线上，可以使用以下的命令：
 
@@ -143,7 +150,7 @@ git update-index --no-assume-unchanged
 git ls-files -v
 ```
 
-### 查看远程仓库
+#### 查看远程仓库
 
 要查看当前配置有哪些远程仓库，可以用 `git remote -v` 命令，它会列出每个远程库的名字：
 
@@ -153,13 +160,6 @@ origin  git@github.com:ethan-funny/knowledge-lists.git (fetch)
 origin  git@github.com:ethan-funny/knowledge-lists.git (push)
 ```
 
-### 设置 editor
-
-默认是系统的 vi
-
-```shell
-$ git config --global core.editor emacs
-```
 
 ### 参考资料
 
@@ -167,3 +167,5 @@ $ git config --global core.editor emacs
 2. [常用 Git 命令清单](http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
 3. [Git 教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 4. [Git 常用命令备忘](http://stormzhang.com/git/2014/01/27/git-common-command/)
+
+
