@@ -18,7 +18,7 @@ git 的全局配置文件在 `~/.gitconfig`，单个项目的配置文件在 `./
 ```shell
 $ git config --global user.name my_name       # user.name
 $ git config --global user.email my_email     # user.email
-$ git config --glocal core.quotepath false    # 显示中文文件名
+$ git config --global core.quotepath false    # 显示中文文件名
 $ git config --global core.editor emacs       # 设置 Editor 为 emacs
 $ git config --global alias.co checkout       # 设置别名
 $ git config --global alias.ci commit
