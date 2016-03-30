@@ -164,6 +164,28 @@ True
 <type 'unicode'>
 ```
 
+### example3
+
+看一个简单的小程序 hello.py
+
+```python
+hello = u'你好'
+print hello
+```
+
+在终端执行 `python hello.py` 正常打印，但是如果将其重定向到文件 `python hello.py > result` 会发现 `UnicodeEncodeError`
+
+这是因为：输出到控制台时，print 使用的是控制台的默认编码，而重定向到文件时，print 就不知道使用什么编码了，于是就使用了默认编码 ascii 导致出现编码错误。
+
+应该改成如下:
+
+```python
+hello = u'你好'
+print hello.encode('utf-8')
+```
+
+这样执行 `python hello.py > result` 就没有问题
+
 ## 字符编码笔记
 
 ### ASCII码
