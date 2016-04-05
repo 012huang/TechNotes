@@ -37,7 +37,7 @@ $ git config --list                           # 查看 git 的所有配置信息
 $ git config (--local) user.name another_name
 $ git config (--local) user.email another_email
 # 查看当前工作目录下的『用户名称』的配置
-git config user.name 
+$ git config user.name 
 ```
 
 
@@ -120,7 +120,7 @@ $ git checkout -- path/to/file
 - 取消在本地对**文件**做的修改，将该**文件**还原到某个版本
 
 ```shell
-git checkout <commit hash> path/to/file
+$ git checkout <commit hash> path/to/file
 ```
 
 
@@ -141,13 +141,13 @@ $ git checkout -- path/to/file
 
 ```shell
 # 本地修改不提交到远程仓库
-git update-index --assume-unchanged filename
+$ git update-index --assume-unchanged filename
 
 # 取消本地忽略
-git update-index --no-assume-unchanged 
+$ git update-index --no-assume-unchanged 
 
 # 查看本地仓库哪些文件被加入忽略列表
-git ls-files -v
+$ git ls-files -v
 ```
 
 #### 查看远程仓库
@@ -160,6 +160,14 @@ origin  git@github.com:ethan-funny/knowledge-lists.git (fetch)
 origin  git@github.com:ethan-funny/knowledge-lists.git (push)
 ```
 
+#### 查看分支
+
+```shell
+# 查看本地分支
+$ git branch 
+# 查看远程分支 
+git branch -a 
+```
 
 ### 参考资料
 
