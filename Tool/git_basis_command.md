@@ -132,7 +132,7 @@ $ git checkout <commit hash> path/to/file
 # 拉取远程仓库的更新数据
 $ git fetch
 # 检出最新版
-$ git checkout -- path/to/file
+$ git checkout origin/master -- path/to/file
 ```
 
 #### 忽略已经跟踪的文件的改动
