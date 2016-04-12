@@ -122,6 +122,60 @@ def search_data():
         print "name that begins with 'l' or ends with 'r' are ", name
 ```
 
+## 查找常用语句
+
+- 比较运算
+
+```
+# 年龄大于 20
+db.collection.find({"age": {'$gt': 20}})
+# 年龄小于 20
+db.collection.find({"age": {'$lt': 20}})
+# 年龄大于等于 20
+db.collection.find({"age": {'$gte': 20}})
+# 年龄小于等于 20
+db.collection.find({"age": {'$lte': 20}})
+# 年龄大于 20 且 小于 30 且不等于 25
+db.collection.find({"age": {'$gt': 20, '$lt': 30, '$ne': 25}})
+```
+
+
+- `$exists` 字段是否存在
+
+```
+# name 字段存在或不存在
+db.collection.find({'name': {'$exists': True}})
+db.collection.find({'name': {'$exists': False}})
+```
+
+- `$or` 查询
+
+```
+# 查找 a=1 或 b=2
+db.collection.find({'$or': [{a: 1}, {b: 2}]})
+```
+
+- `$in` 查询
+
+```
+# a 属于 [1,2,3]中的任何一个
+db.collection.find({a: {'$in': [1,2,3]}})
+# a 不属于 [1,2,3]中的任何一个
+db.collection.find({a: {'$nin': [1,2,3]}})
+```
+
+- `$all` 查询
+
+```
+# 全部属于
+db.collection.find({a: {'$all': [1,2,3]}})
+```
+
+
+
+
+
+
 
 # Reference
 1. [PyMongo 3.2.2 documentation](https://api.mongodb.org/python/current/tutorial.html)
