@@ -21,9 +21,7 @@
 - IntelliJ IDEA 15 CE
 - PyCharm
 - SourceTree
-
 - macvim
-
 
 ```shell
 两种安装方法
@@ -31,12 +29,14 @@
 brew install macvim --with-override-system-vim
 
 YouCompleteMe
-./install.py --clang-completer --gocode-completer
+./install.py --clang-completer (支持 C/C++)
+./install.py --clang-completer --gocode-completer (确保已经安装 go)
+./install.py --clang-completer  --tern-completer (确保已经安装 nodejs 和 npm)
 
 
 ## 直接下载二进制包，若想在 termianl 中使用
 alias vim='mvim -v'
-alias vim="/Users/user/Applications/MacVim.app/Contents/MacOS/Vim"
+or alias vim="/Users/user/Applications/MacVim.app/Contents/MacOS/Vim"
 ```
 
 - SnippetsLab
@@ -46,6 +46,7 @@ alias vim="/Users/user/Applications/MacVim.app/Contents/MacOS/Vim"
 - Python
     
 不用系统自带的 python，用 brew 安装一个
+
 ```
 brew install python --framework --universal
 ```
@@ -102,7 +103,16 @@ web 编程开发工具
 
 ## Network
 
-- Chrome (SwitchOmega, evernote)
+- Chrome，常用扩展有:
+    - [SwitchyOmega](https://github.com/FelisCatus/SwitchyOmega)
+    - [evernote](https://chrome.google.com/webstore/detail/evernote-web-clipper/pioclpoplcdbaefihamjohnefbikjilc?hl=zh-CN)
+    - [copy-as-markdown](https://github.com/chitsaou/copy-as-markdown), copy url as markdown
+    - [octotree](https://github.com/buunguyen/octotree), Code tree for GitHub and GitLab
+    - [vimium](https://github.com/philc/vimium)
+    - [undirect](https://github.com/xwipeoutx/undirect), removes tracking and redirection from google search results
+    - [Empty New Tab Page](https://chrome.google.com/webstore/detail/empty-new-tab-page/dpjamkmjmigaoobjbekmfgabipmfilij?hl=zh-CN)
+
+
 - GoAgentX
 - Lantern
 - Surge
