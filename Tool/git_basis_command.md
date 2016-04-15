@@ -149,6 +149,12 @@ $ git update-index --no-assume-unchanged
 # 查看本地仓库哪些文件被加入忽略列表
 $ git ls-files -v
 ```
+#### 忽略文件设置 (.gitignore, exclude)
+
+默认情况下，`git` 目录下面的文件都会被上传到远程仓库，如果想忽略某些文件，比如编译生成的中间文件，日志文件等，这时可以在本地目录新建一个 `.gitignore` 文件，`.gitignore` 的用法可以参考下面这个链接:[A collection of useful .gitignore templates](https://github.com/github/gitignore)。
+
+`git` 还提供了一种 `exclude` 的方式来忽略本地文件，与 `.gitignore` 不同的是，`.gitignore` 这个文件本身会被 push 到仓库中，它里面一般保存了公共的需要排除的文件，而 `exclude` 文件是自己本地忽略的设置，不会影响到其他人，也不会提交到仓库中。`exclude` 文件的位置在 `.git/info/exclude`，写法跟 `.gitignore` 类似。
+
 
 #### 查看远程仓库
 
