@@ -141,6 +141,21 @@ defaults write com.apple.screencapture location ~/Pictures
 killall SystemUIServer
 ```
 
+- .DS_Store 配置
+
+    DS_Store 用来存储文件显示属性的，比如文件图标的摆放位置等。
+    
+```
+# 禁止.DS_store生成
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
+
+# 恢复.DS_store生成
+defaults delete com.apple.desktopservices DSDontWriteNetworkStores
+
+# 查找所有的 .DS_Store
+find / -name ".DS_Store"
+```
+
 
 
 
