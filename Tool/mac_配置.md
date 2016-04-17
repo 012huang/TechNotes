@@ -13,7 +13,12 @@
 
 
 ## Develop
-- Xcode
+- Xcode & Xcode command line tools
+
+```shell
+$ xcode-select --install
+```
+
 - Sublime text3
 - Eclipse
 - iterm2 (brew, theme, zsh)
