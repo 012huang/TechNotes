@@ -10,14 +10,11 @@
 
 - [编程语言相关](#编程语言相关)
     - [C++](#c)
-    - [Java](#java)
     - [Python](#python)
-- [Git 相关](#git-相关)
+- [工具相关](#工具相关)
 - [数据库相关](#数据库相关)
     - [mongodb](#mongodb)
-    - [mysql](#mysql)
 - [Linux 相关](#linux-相关)
-- [机器学习](#机器学习)
 
 <!-- /MarkdownTOC -->
 
@@ -28,23 +25,19 @@
 
 ### C++
 
-- [C++ 学习](./Coding/C++/Learn C++.md)
+- [C++ 的学习](./Coding/C++/Learn C++.md)
 - [Boost 使用](./Coding/C++/Boost.md)
 - [智能指针](./Coding/C++/智能指针.md)
 - [可变参数函数](./Coding/C++/可变参数函数.md)
 
-
-### Java
-
-
-
 ### Python
 
-- [python 时间戳处理](./Coding/python/python 时间戳处理.md)
-- [python 正则表达式](./Coding/python/python 正则表达式.md)
-- [python 字符编码](./Coding/python/python 字符编码.md)
-- [virtualenv 使用](./Coding/python/usage_virtualenv.md)
-
+- [python 的学习](./Coding/Python/learn python.md)
+- [python 时间戳处理](./Coding/Python/python 时间戳处理.md)
+- [python 正则表达式](./Coding/Python/python 正则表达式.md)
+- [python 字符编码](./Coding/Python/python 字符编码.md)
+- [python 虚拟环境](./Coding/Python/python_虚拟环境.md)
+- [python tips](./Coding/Python/python tips.md)
 
 
 ## 工具相关
@@ -63,16 +56,13 @@
 
 - [mongodb 命令行操作](./Database/mongodb 命令行操作.md)
 - [pymongo 基本使用](./Databse/pymongo_基本使用.md)
-
+- [mongoengine 基本使用](./Database/mongoengine_基本使用.md)
 
 
 ## Linux 相关
 
 - [Linux 基础操作](./Skill/Linux/linux_basis_command.md)
 - [树莓派基本使用](./Skill/Linux/树莓派.md)
-
-
-## 机器学习
 
 
 
