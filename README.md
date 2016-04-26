@@ -37,6 +37,7 @@
 - [python 正则表达式](./Coding/Python/python 正则表达式.md)
 - [python 字符编码](./Coding/Python/python 字符编码.md)
 - [python 虚拟环境](./Coding/Python/python_虚拟环境.md)
+- [python 将字符串转为字典](./Coding/Python/python_将字符串转为字典.md)
 - [python tips](./Coding/Python/python tips.md)
 
 
