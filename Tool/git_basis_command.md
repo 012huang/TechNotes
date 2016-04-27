@@ -121,6 +121,7 @@ $ git checkout -- path/to/file
 
 ```shell
 $ git checkout <commit hash> path/to/file
+$ git reset <commit hash> path/to/file
 ```
 
 
