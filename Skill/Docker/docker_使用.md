@@ -35,4 +35,45 @@ Docker is up and running!
 To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: docker-machine env dev
 ```
 
+- 查看所有的 VM
+
+```
+$ docker-machine ls
+```
+
+- 启动（关闭）一个名叫 default 的虚拟机
+
+```
+$ docker-machine start default
+$ docker-machine stop default
+```
+
+- 查看 dev 环境的信息
+
+```
+$ docker-machine env dev
+```
+
+- export 虚拟机 dev 的环境变量
+
+```
+$ eval "$(docker-machine env dev)"
+```
+
+- 运行一个 hello-world 的容器
+
+```
+$ docker run hello-world
+```
+
+- 运行一个带标签镜像的容器：
+
+```
+# -t 标示在新容器内指定一个伪终端或终端，-i 标示允许我们对容器内的 STDIN 进行交互在我们的容器内还指定了一个新的命令：/bin/bash。这将在容器内启
+# 动 bash shell，当你完成你的命令的时候，你退出这个容器，你可以输入 exit。一旦你的 Bash shell 退出之后，你的容器就停止了
+$ docker run -t -i ubuntu:14.04 /bin/bash
+```
+
+
+
 
