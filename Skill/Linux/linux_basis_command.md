@@ -31,3 +31,17 @@ $ sudo userdel test
 http://blog.csdn.net/scottxu_5g/article/details/11778257
 ```
 
+## 文件操作
+
+### du
+
+```
+## 统计当前目录大小，去除某个文件夹
+du -sh --exclude="YouCompleteMe" 
+
+## 统计占用磁盘空间最大的前 10 个文件或文件夹，不包括隐藏文件
+du -sh * | sort -rh | head -10
+
+## 统计隐藏文件和文件夹大小
+du -sh .*
+```
