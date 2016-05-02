@@ -1,6 +1,6 @@
 
 
-## 介绍
+## XPath 简介
 
 [XPath](https://www.w3.org/TR/xpath/) 的全称是 XML Path Language，即 XML 路径语言，它是一种在结构化文档（比如 XML 和 HTML 文档）中定位信息的语言，关于 XPath 的介绍可以参考 https://www.w3.org/TR/xpath/。
 
@@ -18,11 +18,11 @@
     </head>
     <body>
         <div id='images'>
-            <a href='image1.html'>Name: My image 1 <br /><img src='image1_thumb.jpg' /></a>
-            <a href='image2.html'>Name: My image 2 <br /><img src='image2_thumb.jpg' /></a>
-            <a href='image3.html'>Name: My image 3 <br /><img src='image3_thumb.jpg' /></a>
-            <a href='image4.html'>Name: My image 4 <br /><img src='image4_thumb.jpg' /></a>
-            <a href='image5.html'>Name: My image 5 <br /><img src='image5_thumb.jpg' /></a>
+            <a href='image1.html'>Name: My image 1 <br/><img src='image1_thumb.jpg'/></a>
+            <a href='image2.html'>Name: My image 2 <br/><img src='image2_thumb.jpg'/></a>
+            <a href='image3.html'>Name: My image 3 <br/><img src='image3_thumb.jpg'/></a>
+            <a href='image4.html'>Name: My image 4 <br/><img src='image4_thumb.jpg'/></a>
+            <a href='image5.html'>Name: My image 5 <br/><img src='image5_thumb.jpg'/></a>
         </div>
     </body>
 </html>
@@ -49,8 +49,8 @@
 
 |        路径表达式        |                      结果                      |
 |--------------------------|------------------------------------------------|
-| //body/a[1]              | 选取属于 body 子元素的第一个 a 元素            |
-| //body/a[last()]         | 选取属于 body 子元素的最好一个 a 元素          |
+| //body//a[1]              | 选取属于 body 子元素的第一个 a 元素            |
+| //body//a[last()]         | 选取属于 body 子元素的最好一个 a 元素          |
 | //a[@href]               | 选取所有拥有名为 href 的属性的 a 元素          |
 | //a[@href='image2.html'] | 选取所有 href 属性等于 "image2.html" 的 a 元素 |
 
@@ -61,19 +61,68 @@
 
 代码示例：
 
+```python
+# -*- coding: utf-8 -*-
+
+from lxml import etree
 
 
+html = """
+<html>
+    <head>
+        <base href='http://example.com/' />
+        <title>Example website</title>
+    </head>
+    <body>
+        <div id='images'>
+            <a href='image1.html'>Name: My image 1 <br/><img src='image1_thumb.jpg'/></a>
+            <a href='image2.html'>Name: My image 2 <br/><img src='image2_thumb.jpg'/></a>
+            <a href='image3.html'>Name: My image 3 <br/><img src='image3_thumb.jpg'/></a>
+            <a href='image4.html'>Name: My image 4 <br/><img src='image4_thumb.jpg'/></a>
+            <a>Name: My image 5 <br/><img src='image5_thumb.jpg'/></a>
+        </div>
+    </body>
+</html>
+"""
+
+page_source = etree.HTML(html.decode('utf-8'))
+
+title = page_source.xpath("/html/head/title/text()")
+all_href = page_source.xpath("//a/@href")
+a_image1_text = page_source.xpath("//body//a[1]/text()")
+a_image1_src = page_source.xpath("//a[@href='image1.html']/img/@src")
+a_last = page_source.xpath("//body//a[last()]/img/@src")
+all_img_src = page_source.xpath("//img/@src")
+
+print "Title", title
+print "all href", all_href
+print "a_image1_text", a_image1_text
+print "a_image1_src", a_image1_src
+print "a_last", a_last
+print "all_img_src", all_img_src
+```
+
+输出结果如下：
+
+```python
+Title ['Example website']
+all href ['image1.html', 'image2.html', 'image3.html', 'image4.html']
+a_image1_text ['Name: My image 1 ']
+a_image1_src ['image1_thumb.jpg']
+a_last ['image5_thumb.jpg']
+all_img_src ['image1_thumb.jpg', 'image2_thumb.jpg', 'image3_thumb.jpg', 'image4_thumb.jpg', 'image5_thumb.jpg']
+```
+要注意的是，如果 xpath() 找到了匹配的数据，返回的结果是一个数组，不管是一个还是多个，比如结果中的 `Title`。
 
 
+## 参考资料
 
-
-[XML Path Language (XPath)](https://www.w3.org/TR/xpath/)
-[lxml - Processing XML and HTML with Python](http://lxml.de/)
-[XPath 语法](http://www.w3school.com.cn/xpath/xpath_syntax.asp)
-[XPath、XQuery 以及 XSLT 函数](http://www.w3school.com.cn/xpath/xpath_functions.asp)
-[xpath提取HTML // Astray Linux](http://astraylinux.com/2014/08/21/server-xpath-pick-html/)
-[选择器(Selectors) — Scrapy 1.0.5 文档](http://scrapy-chs.readthedocs.io/zh_CN/1.0/topics/selectors.html)
-
+- [XML Path Language (XPath)](https://www.w3.org/TR/xpath/)
+- [lxml - Processing XML and HTML with Python](http://lxml.de/)
+- [XPath 语法](http://www.w3school.com.cn/xpath/xpath_syntax.asp)
+- [XPath、XQuery 以及 XSLT 函数](http://www.w3school.com.cn/xpath/xpath_functions.asp)
+- [xpath提取HTML // Astray Linux](http://astraylinux.com/2014/08/21/server-xpath-pick-html/)
+- [选择器(Selectors) — Scrapy 1.0.5 文档](http://scrapy-chs.readthedocs.io/zh_CN/1.0/topics/selectors.html)
 
 
 
