@@ -20,6 +20,7 @@ $ xcode-select --install
 ```
 
 - Sublime text3
+    - [vkocubinsky/SublimeTableEditor](https://github.com/vkocubinsky/SublimeTableEditor)
 - Eclipse
 - iterm2 (brew, theme, zsh)
 - Dash
