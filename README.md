@@ -55,9 +55,9 @@
 
 ### mongodb
 
-- [mongodb 命令行操作](./Database/mongodb 命令行操作.md)
-- [pymongo 基本使用](./Databse/pymongo_基本使用.md)
-- [mongoengine 基本使用](./Database/mongoengine_基本使用.md)
+- [mongodb 命令行操作](./Skill/Database/mongodb 命令行操作.md)
+- [pymongo 基本使用](./Skill/Databse/pymongo_基本使用.md)
+- [mongoengine 基本使用](./Skill/Database/mongoengine_基本使用.md)
 
 
 ## Linux 相关
