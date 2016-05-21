@@ -4,6 +4,7 @@
 - [Develop](#develop)
 - [Office](#office)
 - [Tool](#tool)
+- [Reference](#reference)
 
 <!-- /MarkdownTOC -->
 
@@ -47,4 +48,11 @@
 - PhraseExpress
 - Wox
 - Xmind
+
+
+## Reference
+
+[这 8 款应用，让 Windows 也拥有 OS X 的优秀特性 - 少数派](http://sspai.com/34288)
+
+
 
