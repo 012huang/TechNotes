@@ -100,12 +100,11 @@ web 编程开发工具
 
 
 
-
 ## GTD
 
 - Doit.im
 - Day one 2
-
+- 滴答清单
 
 ## Network
 
@@ -117,6 +116,10 @@ web 编程开发工具
     - [vimium](https://github.com/philc/vimium)
     - [undirect](https://github.com/xwipeoutx/undirect), removes tracking and redirection from google search results
     - [Empty New Tab Page](https://chrome.google.com/webstore/detail/empty-new-tab-page/dpjamkmjmigaoobjbekmfgabipmfilij?hl=zh-CN)
+    - [Firebug](https://chrome.google.com/webstore/detail/firebug-lite-for-google-c/bmagokdooijbeehmkpknfglimnifench)
+    - [XPath Helper](https://chrome.google.com/webstore/detail/xpath-helper/hgimnogjllphhhkhlmebbmlgjoejdpjl)
+    - [JSONView](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc)
+    - [1Password](https://1password.com/)
 
 
 - GoAgentX
