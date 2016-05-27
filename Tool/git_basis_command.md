@@ -72,6 +72,8 @@ $ git status -uno
 $ git log
 # 简洁
 $ git log --pretty=oneline
+# 记录你的每一次命令
+$ git reflog
 ```
 
 - 查看某个文件的提交记录
