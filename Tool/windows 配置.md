@@ -48,6 +48,7 @@
 - PhraseExpress
 - Wox
 - Xmind
+- [JRuler](http://www.spadixbd.com/jruler/): 用来测量屏幕上任意水平或者竖直两点间的长度，可用像素、英寸显示长度。
 
 
 ## Reference
