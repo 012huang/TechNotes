@@ -97,6 +97,8 @@ web 编程开发工具
 
 - PinPhoto
 - Xee
+- EasyMeasurer: 屏幕测量标尺工具，以像素为单位显示屏幕对象的距离
+
 
 
 
@@ -120,6 +122,7 @@ web 编程开发工具
     - [XPath Helper](https://chrome.google.com/webstore/detail/xpath-helper/hgimnogjllphhhkhlmebbmlgjoejdpjl)
     - [JSONView](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc)
     - [1Password](https://1password.com/)
+    - [react-devtools](https://github.com/facebook/react-devtools): An extension that allows inspection of React component hierarchy in Chrome Developer Tools
 
 
 - GoAgentX
