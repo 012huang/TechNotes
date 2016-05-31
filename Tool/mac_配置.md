@@ -2,6 +2,7 @@
 <!-- MarkdownTOC -->
 
 - [Develop](#develop)
+- [命令行效率工具](#命令行效率工具)
 - [System](#system)
 - [Office](#office)
 - [GTD](#gtd)
@@ -60,6 +61,16 @@ brew install python --framework --universal
 - [coda2](https://panic.com/coda/)
     
 web 编程开发工具
+
+
+## 命令行效率工具
+
+- zsh
+- ag, Like grep or ack, but faster.
+- proxychains-ng
+- polipo 为终端设置 socks 代理
+- autojump
+
 
 ## System
 - Alfred
