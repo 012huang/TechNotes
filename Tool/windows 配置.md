@@ -18,7 +18,8 @@
 	- [Zeal](https://zealdocs.org/)
 - SecureCRT
 - SourceTree
-- [chocolatey](https://chocolatey.org/) windows 上的包管理器
+- [chocolatey](https://chocolatey.org/) windows 上的包管理器，类似 apt-get
+- [cmder](https://github.com/cmderdev/cmder) shell 终端，可以使用 grep, find 等 linux 命令
 
 
 
