@@ -70,6 +70,7 @@ web 编程开发工具
 - proxychains-ng
 - polipo 为终端设置 socks 代理
 - autojump
+- tmux
 
 
 ## System
