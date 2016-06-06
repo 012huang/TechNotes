@@ -2,6 +2,9 @@
 
 ## 插件
 
+- HTML-CSS-JS Prettify: 格式化 HTML 代码
+
+
 
 - 大小写转换
 
