@@ -25,6 +25,7 @@ $ xcode-select --install
 - Eclipse
 - iterm2 (brew, theme, zsh)
 - Dash
+    Dash is an API Documentation Browser and Code Snippet Manager. You can even generate your own docsets or request docsets to be included. http://kapeli.com/dash
 - IntelliJ IDEA 15 CE
 - PyCharm
 - SourceTree
