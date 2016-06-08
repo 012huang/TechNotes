@@ -15,6 +15,7 @@
 - JetBrains 
 - 开发文档
 	- [velocity](https://velocity.silverlakesoftware.com/)
+        Velocity gives your Windows desktop offline access to over 150 API documentation sets (provided by Dash for OS X).
 	- [Zeal](https://zealdocs.org/)
 - SecureCRT
 - SourceTree
