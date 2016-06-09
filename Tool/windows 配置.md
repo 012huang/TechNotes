@@ -51,6 +51,7 @@
 - Wox
 - Xmind
 - [JRuler](http://www.spadixbd.com/jruler/): 用来测量屏幕上任意水平或者竖直两点间的长度，可用像素、英寸显示长度。
+- [Capslock+](http://cjkis.me/2016/what-is-the-use-of-capslock-plus/): Capslock+ 是一个加强 Capslock 键的功能，以提高效率的工具
 
 
 ## Reference
