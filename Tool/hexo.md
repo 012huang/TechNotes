@@ -104,7 +104,15 @@ freematrix@shuyouMBP:blog[23:28] $ git clone https://github.com/iissnan/hexo-the
     - 最终还是采取了删除 `.git`目录的做法，发现不行，向远程仓库提交 `删除整个 next 文件夹`的更改，再重新引入一个新的命名 `next2`，里面已经没有 `.git` 目录了，再提交，就可以了。
 
 
-
+6. 将 github 托管改为由 gitlab 托管
+    - 在 gitlab 下建立一个新的 repository ，名叫 blog（与hexo文件夹名一样即可）
+    - 进入本地 blog 文件夹，cd ~/blog
+    - git remote remove origin
+    - cd .git; git remote add origin git@gitlab.com:freematrix/blog.git
+    - git config user.name "Ethan"; git config user.email "freematrix@163.com"
+    - git add .gitignore _config.yml package.json scaffolds source themes
+    - git push --set-upstream origin master
+    - 在另一台电脑上，git branch --set-upstream-to=origin/master master
 
 
 ## Reference
