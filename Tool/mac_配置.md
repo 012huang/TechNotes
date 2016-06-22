@@ -149,6 +149,11 @@ web 编程开发工具
 
 - QuickLook 增强
 
+- Change the Notification Center banner dwell time in OS X
+    defaults delete com.apple.notificationcenterui bannerTime
+    defaults write com.apple.notificationcenterui bannerTime SECONDS
+    defaults write com.apple.notificationcenterui bannerTime 2
+
 
 - 光标闪烁频率（cursor blink rate）
 
