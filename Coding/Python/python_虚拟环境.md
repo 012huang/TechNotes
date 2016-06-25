@@ -16,6 +16,10 @@ $ pip install virtualenvwrapper
 # 创建一个名为 ENV 的虚拟环境，它会自动帮我们安装 python, pip 等
 may@Matrix-MacBook-Pro:~[14:32] $ virtualenv ENV
 
+# 创建 python3 的虚拟环境
+virtualenv --python=/usr/local/bin/python3 VENV
+
+
 New python executable in ENV/bin/python
 Installing setuptools, pip, wheel...done.
 ```
@@ -68,6 +72,8 @@ virtualenvwrapper.user_scripts creating /Users/imay/.virtualenvs/env1/bin/preact
 virtualenvwrapper.user_scripts creating /Users/imay/.virtualenvs/env1/bin/postactivate
 virtualenvwrapper.user_scripts creating /Users/imay/.virtualenvs/env1/bin/get_env_details
 (env1)imay@Matrix-MacBook-Pro:~ $
+
+mkvirtualenv --python=/usr/local/bin/python3 VENV
 ```
 
 ### 切换环境
