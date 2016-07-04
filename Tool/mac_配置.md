@@ -136,6 +136,8 @@ web 编程开发工具
     - [JSONView](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc)
     - [1Password](https://1password.com/)
     - [react-devtools](https://github.com/facebook/react-devtools): An extension that allows inspection of React component hierarchy in Chrome Developer Tools
+    - [speed-dial-2](https://chrome.google.com/webstore/detail/speed-dial-2/jpfpebmajhhopeonhlcgidhclcccjcik?hl=zh-CN) 快捷拨号插件，可自定义书签，快速访问
+    - [infinity-new-tab](https://chrome.google.com/webstore/detail/infinity-new-tab/dbfmnekepjoapopniengjbcpnbljalfg?hl=zh-CN&gl=ID) 又一款快捷拨号插件，很精美
 
 
 - GoAgentX
