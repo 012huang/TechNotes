@@ -1,20 +1,27 @@
-# 简介
+---
+title: "在 Python 中使用 JSON"
+date: 2016/07/16 17:58
+tags: [python, json]
+categories: Python
 
-- 序列化和反序列化 (Serialization & Deserialization)
+---
 
-序列化： 将数据结构或对象转换成二进制串的过程。
-反序列化：将在序列化过程中所生成的二进制串转换成数据结构或者对象的过程。
+# JSON 简介
+
+在介绍 JSON 之前，我们先介绍序列化（Serialization）和反序列化（Deserialization）的概念。
+
+- 序列化： 将数据结构或对象转换成二进制串的过程。
+- 反序列化：将在序列化过程中所生成的二进制串转换成数据结构或者对象的过程。
 
 常见的序列化方法有：XML、JSON、Protobuf、Thrift 和 Avro 等。
 
-- JSON（JavaScript Object Notation）
-
-[JSON](http://www.json.org/) 是一种轻量级的网络数据交换格式，绝大部分编程语言都提供了很好的库来对 JSON 进行操作。键值对是 JSON 中最基本的数据结构。
+[JSON](http://www.json.org/)（JavaScript Object Notation）是一种轻量级的网络数据交换格式，绝大部分编程语言都提供了很好的库来对 JSON 进行操作。键值对是 JSON 中最基本的数据结构。
 
 Python 中已经内置了对 JSON 的支持，我们**把一个 Python 对象编码转换成 JSON 字符串称为 encoding，也就是序列化；把 JSON 字符串解码转换成 Python 对象称为 decoding，也就是反序列化**。
 
 在 Python 中，常见的对象类型主要有：string, int, list, dict, tuple 等。
 
+<!--more-->
 
 ## 将 Python 数据类型编码成 JSON 字符串
 
@@ -36,7 +43,6 @@ Python 中已经内置了对 JSON 的支持，我们**把一个 Python 对象编
 >>> json.dumps(data3, sort_keys=True) # 按键排序
 '[{"a": "A", "b": [2, 3], "c": 6.0}]'
 ```
-
 
 ## 将 JSON 字符串解码成 Python 数据类型
 
@@ -84,4 +90,5 @@ ValueError: Expecting property name: line 1 column 2 (char 1)
 - [序列化和反序列化](http://www.infoq.com/cn/articles/serialization-and-deserialization)
 - [JSON对象 -- JavaScript 标准参考教程（alpha）](http://javascript.ruanyifeng.com/stdlib/json.html)
 - [Python 处理 JSON](http://liuzhijun.iteye.com/blog/1859857)
+
 
