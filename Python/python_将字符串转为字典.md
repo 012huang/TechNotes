@@ -1,3 +1,10 @@
+---
+title: "Python 如何将字符串转为字典"
+date: 2016-04-24 12:17:05
+tags: [python]
+categories: Python
+
+---
 
 
 # Python 将字符串转为字典
