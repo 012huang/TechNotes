@@ -1,4 +1,10 @@
+---
+title: "Python 字符编码"
+date: 2016/08/04 00:55
+tags: [python]
+categories: Python
 
+---
 
 # Python字符编码
 
