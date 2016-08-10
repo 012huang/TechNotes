@@ -1,6 +1,12 @@
-# datetime & second
+---
+title: "Python 中 datetime 和 second 之间的转换"
+date: 2016/08/08 16:05
+tags: [python]
+categories:  Python
 
-- 计算两个 datetime 之间的秒数
+---
+
+## 计算两个 datetime 之间的秒数
 
 ```python
 import datetime
@@ -12,7 +18,7 @@ print (b-a).total_seconds()
 86400.0
 ```
 
-- 将秒数转为 day hour:minute:second
+## 将秒数转为 day hour:minute:second
 
 ```python
 >>> import datetime
