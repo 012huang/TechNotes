@@ -87,9 +87,7 @@ Serving HTTP on 0.0.0.0 port 8080 ...
 
 ## 参考资料
 
-- [SimpleHTTPServer: a quick way to serve a directory
-](http://www.2ality.com/2014/06/simple-http-server.html)
+- [SimpleHTTPServer: a quick way to serve a directory](http://www.2ality.com/2014/06/simple-http-server.html)
 
-- [非常简单的Python HTTP 服务
-](http://coolshell.cn/articles/1480.html)
+- [非常简单的Python HTTP 服务](http://coolshell.cn/articles/1480.html)
 
