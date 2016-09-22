@@ -2,7 +2,7 @@
 
 A decorator is a function that returns a function.
 
-装饰器模式Decorator可以动态的扩充一个类或者函数的功能，实现的方法一般是在原有的类或者函数上包裹一层修饰类或修饰函数。
+装饰器模式 Decorator 可以动态的扩充一个类或者函数的功能，实现的方法一般是在原有的类或者函数上包裹一层修饰类或修饰函数。
 
 要理解Python的装饰器，就先要了解闭包。基本上支持函数式编程（函数可以作为对象传递）的语言，都支持闭包。我在之前Javascript闭包中曾介绍过它，Python的实现基本上也一样，就是在函数中返回其内部函数，这样当外部函数的生命周期结束后，其被内部函数使用的资源还会被保存下来。
 
@@ -134,6 +134,24 @@ if __name__ == '__main__':
     g.send("python generators rock!")
 ```
 
+```py
+def max_age(*args):
+    time.sleep(3)
+    return max(args)
+
+def cache_decorator(func):
+    cache = {}
+    def _wrapper(*args):
+        if args in cache:
+            return cache[args]
+        cache[args] = result = func(*args)
+        return result
+    return _wrapper
+cached_max_age = cache_decorator(max_age)
+cached_max_age(1, 2, 3, 0)
+cached_max_age(1, 2, 3, 0)
+```
+
 
 ## 带参数的装饰器
 
@@ -155,5 +173,6 @@ if __name__ == '__main__':
 - [Python装饰器学习（九步入门）- cnblogs](http://www.cnblogs.com/rhcad/archive/2011/12/21/2295507.html)
 - [Python 的闭包和装饰器 - SegmentFault](https://segmentfault.com/a/1190000004461404)
 - [How can I make a chain of function decorators in Python? - Stack Overflow](http://stackoverflow.com/questions/739654/how-can-i-make-a-chain-of-function-decorators-in-python)
+- [Python 设计模式: 装饰器模式(decorator pattern) - Mozillazg's Blog](https://mozillazg.com/2016/08/python-decorator-pattern.html)
 
 
