@@ -2,13 +2,13 @@
 npm install -g gitbook-cli
 gitbook -V
 
-imaygou@Matrix-MacBook-Pro:gitbook_demo[10:21] $ gitbook ls
+$ gitbook ls
 There is no versions installed
 You can install the latest version using: "gitbook fetch"
 
 gitbook fetch
 
-imaygou@Matrix-MacBook-Pro:gitbook_demo[10:30] $ gitbook init
+$ gitbook init
 info: create chapter1/README.md
 info: create chapter1/section1.1.md
 info: create chapter1/section1.2.md
@@ -17,7 +17,7 @@ info: create SUMMARY.md
 info: initialization is finished
 
 
-imaygou@Matrix-MacBook-Pro:gitbook_demo[10:35] $ gitbook serve
+$ gitbook serve
 Live reload server started on port: 35729
 Press CTRL+C to quit ...
 
@@ -38,7 +38,7 @@ Serving book on http://localhost:4000
 
 ## 使用
 
-README.md和SUMMARY.md 是Gitbook项目必备的两个文件，也就是一本最简单的gitbook也必须含有这两个文件，它们在一本Gitbook中具有不同的用处。
+README.md 和 SUMMARY.md 是 Gitbook 项目必备的两个文件，也就是一本最简单的 gitbook 也必须含有这两个文件，它们在一本 Gitbook 中具有不同的用处。
 
 
 ## 插件
@@ -56,6 +56,7 @@ https://github.com/GitbookIO/gitbook-cli
 https://github.com/GitbookIO/gitbook/blob/master/docs/setup.md
 http://www.chengweiyang.cn/gitbook/
 http://gitbook.zhangjikai.com/installation.html
+[Gitbook Introduction - 陈斌彬的技术博客](https://cnbin.github.io/blog/2015/07/16/gitbook-introduction/)
 
 
 
